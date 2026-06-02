@@ -1,41 +1,79 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ─── Dependencies ─────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# ─── Next.js build output ─────────────────────────────────────
+.next/
+out/
+build/
+dist/
 
-# testing
-/coverage
+# ─── Environment variables (KEEP SECRET) ──────────────────────
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
 
-# next.js
-/.next/
-/out/
+# ─── TypeScript ───────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# ─── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# ─── OS generated files ───────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
-# vercel
-.vercel
+# ─── Editor / IDE ─────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+.history/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ─── Testing ──────────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ─── Package manager locks (keep one, ignore others) ──────────
+# Uncomment the ones you DON'T use:
+# yarn.lock
+# pnpm-lock.yaml
+
+# ─── Vercel / Deployment ──────────────────────────────────────
+.vercel/
+.netlify/
+
+# ─── Misc ─────────────────────────────────────────────────────
+*.pem
+.cache/
+.parcel-cache/
+*.tgz
+.npm/
